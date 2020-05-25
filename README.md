@@ -30,3 +30,4 @@ box.addEventListener('onselectedbox', function (element) {
 // create a generic html element , for example youtube iframe :)
 allisbox.addBox("<iframe width='560' height='315' src='https://www.youtube.com/embed/FGBhQbmPwH8' frameborder='0'  allowfullscreen></iframe>");
 ```
+<img src="https://raw.githubusercontent.com/chinostroza/allisbox/master/screen_example.png" />
