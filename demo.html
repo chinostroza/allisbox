@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>allisbox</title>
+</head>
+<body>
+<script src="allisbox-min-0.1.0.js"></script>
+<script type="text/javascript">
+
+var x_body = document.getElementsByTagName("body")[0];
+    x_body.style.margin = 0;
+
+var allisbox = new Allisbox(app);
+
+fetch('https://dog.ceo/api/breeds/image/random')
+  .then(response => response.json())
+  .then(data =>  allisbox.img(data.message));
+
+	allisbox.img(
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+		-700,
+		500,
+		-121.86016868872878
+		);
+
+	allisbox.img(
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png",
+		713.07,
+		422.226,
+		-121.86
+		);
+
+	allisbox.img(
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/368px-Swift_logo.svg.png",
+		293.0698303956947,
+		-397.7736561965088,
+		-121.86016868872878
+		);
+
+	var box = allisbox.img(
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/1200px-Kotlin-logo.svg.png",
+		293.0698303956947,
+		-397.7736561965088,
+		-121.86016868872878
+		);
+
+	
+	box.addEventListener('onselectedbox', function (element) {
+		alert("kotlin")
+	}, false);
+	
+
+	allisbox.img('https://lh3.googleusercontent.com/I5bgTQUyPDs-TuahWZmjclW4EjWLPrBbZmbx9nDshT0WREY1nltbOkJVDZCP6yi4X7uJXg=s85',
+		1315.84,
+		-937.494,
+		16.3012
+	);
+
+	allisbox.addBox("<iframe width='560' height='315' src='https://www.youtube.com/embed/FGBhQbmPwH8' frameborder='0'  allowfullscreen></iframe>")
+
+	function moreX(obj){ obj.position.x = obj.position.x + 20; }
+	function minusX(obj){ obj.position.x = obj.position.x - 20; }
+	function moreY(obj){ obj.position.y = obj.position.y + 20; }
+	function minusY(obj){ obj.position.y = obj.position.y - 20; }
+	function moreZ(obj){ obj.position.z = obj.position.z + 20; }
+	function minusZ(obj){ obj.position.z = obj.position.z - 20; }
+
+</script>
+<div id="float_nav" style="position: absolute;bottom: 0;right: 0;margin-right: 20px;margin-bottom: 20px;">
+	<button id="x_more" onclick="moreX(allisbox.getBoxSelected())">x+</button>
+	<button id="x_minus" onclick="minusX(allisbox.getBoxSelected())">x-</button>
+	<button id="x_more" onclick="moreY(allisbox.getBoxSelected())">y+</button>
+	<button id="x_minus" onclick="minusY(allisbox.getBoxSelected())">y-</button>
+	<button id="x_more" onclick="moreZ(allisbox.getBoxSelected())">z+</button>
+	<button id="x_minus" onclick="minusZ(allisbox.getBoxSelected())">z-</button>
+</div>
+</body>
+</html>
