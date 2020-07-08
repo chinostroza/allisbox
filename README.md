@@ -2,7 +2,7 @@
 
 allisbox is open source 3D display library for html components
 
-* include library, after tag <body>
+* include library, after tag `<body>`
 
 ```html
 <body>
