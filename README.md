@@ -1,6 +1,6 @@
-# allisbox community edition
+# allisbox
 
-allisbox community edition is open source 3D display library for html components, is a core of www.allisbox.com
+allisbox 3D display for html components
 
 * include library, after tag `<body>`
 
