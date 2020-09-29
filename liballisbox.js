@@ -1,5 +1,5 @@
-function Allisbox ( application ) {
-    this.application = application
+function Allisbox () {
+    this.application = app
 }
 
 Allisbox.prototype.addBox = function( htmlString ){

@@ -4,13 +4,14 @@
 	<title>allisbox</title>
 </head>
 <body>
-<script src="allisbox-min-0.1.0.js"></script>
+<script src="allisbox.js"></script>
+<script src="liballisbox.js"></script>
 <script type="text/javascript">
 
 var x_body = document.getElementsByTagName("body")[0];
     x_body.style.margin = 0;
 
-var allisbox = new Allisbox(app);
+var allisbox = new Allisbox();
 
 fetch('https://dog.ceo/api/breeds/image/random')
   .then(response => response.json())
